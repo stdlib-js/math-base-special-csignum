@@ -1,6 +1,6 @@
 {
   "name": "@stdlib/math-base-special-csignum",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Evaluate the signum function of a complex number.",
   "license": "Apache-2.0",
   "author": {
