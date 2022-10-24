@@ -228,7 +228,7 @@ Copyright &copy; 2016-2022. The Stdlib [Authors][stdlib-authors].
 
 [stdlib-license]: https://raw.githubusercontent.com/stdlib-js/math-base-special-csignum/main/LICENSE
 
-[signum]: http://en.wikipedia.org/wiki/Sign_function
+[signum]: https://en.wikipedia.org/wiki/Sign_function
 
 <!-- <related-links> -->
 
