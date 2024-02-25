@@ -52,6 +52,11 @@ limitations under the License.
 ## Usage
 
 ```javascript
+import csignum from 'https://cdn.jsdelivr.net/gh/stdlib-js/math-base-special-csignum@esm/index.mjs';
+```
+The previous example will load the latest bundled code from the esm branch. Alternatively, you may load a specific version by loading the file from one of the [tagged bundles](https://github.com/stdlib-js/math-base-special-csignum/tags). For example,
+
+```javascript
 import csignum from 'https://cdn.jsdelivr.net/gh/stdlib-js/math-base-special-csignum@v0.2.1-esm/index.mjs';
 ```
 
@@ -120,7 +125,7 @@ im = imag( v );
 
 var uniform = require( 'https://cdn.jsdelivr.net/gh/stdlib-js/random-base-uniform' ).factory;
 import Complex128 from 'https://cdn.jsdelivr.net/gh/stdlib-js/complex-float64@esm/index.mjs';
-import csignum from 'https://cdn.jsdelivr.net/gh/stdlib-js/math-base-special-csignum@v0.2.1-esm/index.mjs';
+import csignum from 'https://cdn.jsdelivr.net/gh/stdlib-js/math-base-special-csignum@esm/index.mjs';
 
 var rand = uniform( -50.0, 50.0 );
 
