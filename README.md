@@ -52,6 +52,11 @@ limitations under the License.
 ## Usage
 
 ```javascript
+import csignum from 'https://cdn.jsdelivr.net/gh/stdlib-js/math-base-special-csignum@deno/mod.js';
+```
+The previous example will load the latest bundled code from the deno branch. Alternatively, you may load a specific version by loading the file from one of the [tagged bundles](https://github.com/stdlib-js/math-base-special-csignum/tags). For example,
+
+```javascript
 import csignum from 'https://cdn.jsdelivr.net/gh/stdlib-js/math-base-special-csignum@v0.2.2-deno/mod.js';
 ```
 
@@ -115,7 +120,7 @@ im = imag( v );
 ```javascript
 var uniform = require( 'https://cdn.jsdelivr.net/gh/stdlib-js/random-base-uniform' ).factory;
 import Complex128 from 'https://cdn.jsdelivr.net/gh/stdlib-js/complex-float64-ctor@deno/mod.js';
-import csignum from 'https://cdn.jsdelivr.net/gh/stdlib-js/math-base-special-csignum@v0.2.2-deno/mod.js';
+import csignum from 'https://cdn.jsdelivr.net/gh/stdlib-js/math-base-special-csignum@deno/mod.js';
 
 var rand = uniform( -50.0, 50.0 );
 
