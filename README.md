@@ -79,8 +79,8 @@ Evaluates the [signum][signum] function of a double-precision complex floating-p
 
 ```javascript
 var Complex128 = require( '@stdlib/complex-float64-ctor' );
-var real = require( '@stdlib/complex-real' );
-var imag = require( '@stdlib/complex-imag' );
+var real = require( '@stdlib/complex-float64-real' );
+var imag = require( '@stdlib/complex-float64-imag' );
 
 var v = csignum( new Complex128( -4.2, 5.5 ) );
 // returns <Complex128>
@@ -181,17 +181,17 @@ Evaluates the [signum][signum] function of a double-precision complex floating-p
 
 ```c
 #include "stdlib/complex/float64/ctor.h"
-#include "stdlib/complex/real.h"
-#include "stdlib/complex/imag.h"
+#include "stdlib/complex/float64/real.h"
+#include "stdlib/complex/float64/imag.h"
 
 stdlib_complex128_t z = stdlib_complex128( -4.2, 5.5 );
 
 stdlib_complex128_t out = stdlib_base_csignum( z );
 
-double re = stdlib_real( out );
+double re = stdlib_complex128_real( out );
 // returns -0.6069136033622302
 
-double im = stdlib_imag( out );
+double im = stdlib_complex128_imag( out );
 // returns 0.79476781392673
 ```
 
@@ -321,8 +321,8 @@ Copyright &copy; 2016-2024. The Stdlib [Authors][stdlib-authors].
 [npm-image]: http://img.shields.io/npm/v/@stdlib/math-base-special-csignum.svg
 [npm-url]: https://npmjs.org/package/@stdlib/math-base-special-csignum
 
-[test-image]: https://github.com/stdlib-js/math-base-special-csignum/actions/workflows/test.yml/badge.svg?branch=main
-[test-url]: https://github.com/stdlib-js/math-base-special-csignum/actions/workflows/test.yml?query=branch:main
+[test-image]: https://github.com/stdlib-js/math-base-special-csignum/actions/workflows/test.yml/badge.svg?branch=v0.2.2
+[test-url]: https://github.com/stdlib-js/math-base-special-csignum/actions/workflows/test.yml?query=branch:v0.2.2
 
 [coverage-image]: https://img.shields.io/codecov/c/github/stdlib-js/math-base-special-csignum/main.svg
 [coverage-url]: https://codecov.io/github/stdlib-js/math-base-special-csignum?branch=main
