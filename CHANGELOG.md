@@ -4,7 +4,7 @@
 
 <section class="release" id="unreleased">
 
-## Unreleased (2025-12-12)
+## Unreleased (2025-12-31)
 
 <section class="commits">
 
@@ -12,7 +12,8 @@
 
 <details>
 
--   [`0b2faa8`](https://github.com/stdlib-js/stdlib/commit/0b2faa8e50b543fa573577cb0baaada5ddd20297) - **docs:** improve doctests for complex number instances in math/base/special/csignum [(#9012)](https://github.com/stdlib-js/stdlib/pull/9012) _(by Aryan kumar)_
+-   [`f452525`](https://github.com/stdlib-js/stdlib/commit/f45252555bdcc40bac553852422ae028194179cb) - **chore:** add structured package data for `math/base/special/csignum` [(#8583)](https://github.com/stdlib-js/stdlib/pull/8583) _(by Kaustubh Patange, Athan Reines)_
+-   [`0b2faa8`](https://github.com/stdlib-js/stdlib/commit/0b2faa8e50b543fa573577cb0baaada5ddd20297) - **docs:** improve doctests for complex number instances in `math/base/special/csignum` [(#9012)](https://github.com/stdlib-js/stdlib/pull/9012) _(by Aryan kumar)_
 -   [`630ddb7`](https://github.com/stdlib-js/stdlib/commit/630ddb777824b5f6e501fda6dadf4ce41dccb964) - **test:** replace equal with strictEqual _(by Karan Anand)_
 -   [`a1e230f`](https://github.com/stdlib-js/stdlib/commit/a1e230f29297caa89880e9c194c615a0400fb7bc) - **chore:** clean up cppcheck-suppress comments _(by Karan Anand)_
 -   [`90b8cb0`](https://github.com/stdlib-js/stdlib/commit/90b8cb0661088133ece286e2c9f9be687a83a59b) - **docs:** fix example values [(#6362)](https://github.com/stdlib-js/stdlib/pull/6362) _(by Karan Anand)_
@@ -27,10 +28,12 @@
 
 ### Contributors
 
-A total of 2 people contributed to this release. Thank you to the following contributors:
+A total of 4 people contributed to this release. Thank you to the following contributors:
 
 -   Aryan kumar
+-   Athan Reines
 -   Karan Anand
+-   Kaustubh Patange
 
 </section>
 
