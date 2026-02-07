@@ -52,7 +52,7 @@ limitations under the License.
 ## Usage
 
 ```javascript
-import csignum from 'https://cdn.jsdelivr.net/gh/stdlib-js/math-base-special-csignum@deno/mod.js';
+import csignum from 'https://cdn.jsdelivr.net/gh/stdlib-js/math-base-special-csignum@v0.2.3-deno/mod.js';
 ```
 
 #### csignum( z )
@@ -95,7 +95,7 @@ v = csignum( new Complex128( NaN, NaN ) );
 ```javascript
 var uniform = require( 'https://cdn.jsdelivr.net/gh/stdlib-js/random-base-uniform' ).factory;
 import Complex128 from 'https://cdn.jsdelivr.net/gh/stdlib-js/complex-float64-ctor@deno/mod.js';
-import csignum from 'https://cdn.jsdelivr.net/gh/stdlib-js/math-base-special-csignum@deno/mod.js';
+import csignum from 'https://cdn.jsdelivr.net/gh/stdlib-js/math-base-special-csignum@v0.2.3-deno/mod.js';
 
 var rand = uniform( -50.0, 50.0 );
 
