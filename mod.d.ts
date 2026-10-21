@@ -1,7 +1,7 @@
-/**
+/*
 * @license Apache-2.0
 *
-* Copyright (c) 2018 The Stdlib Authors.
+* Copyright (c) 2019 The Stdlib Authors.
 *
 * Licensed under the Apache License, Version 2.0 (the "License");
 * you may not use this file except in compliance with the License.
@@ -16,32 +16,27 @@
 * limitations under the License.
 */
 
-'use strict';
+// TypeScript Version: 4.1
+
+/// <reference types="https://cdn.jsdelivr.net/gh/stdlib-js/types@main/index.d.ts"/>
+
+import { Complex128 } from '@stdlib/types/complex';
 
 /**
-* Evaluate the signum function of a double-precision floating-point complex number.
+* Evaluates the signum function of a double-precision complex floating-point number.
 *
-* @module @stdlib/math-base-special-csignum
+* @param z - input value
+* @returns result
 *
 * @example
 * var Complex128 = require( '@stdlib/complex-float64-ctor' );
-* var csignum = require( '@stdlib/math-base-special-csignum' );
 *
 * var v = csignum( new Complex128( -4.2, 5.5 ) );
 * // returns <Complex128>[ -0.6069136033622302, 0.79476781392673 ]
-*
-* v = csignum( new Complex128( 0.0, 0.0 ) );
-* // returns <Complex128>[ 0.0, 0.0 ]
-*
-* v = csignum( new Complex128( NaN, NaN ) );
-* // returns <Complex128>[ NaN, NaN ]
 */
-
-// MODULES //
-
-var main = require( './main.js' );
+declare function csignum( z: Complex128 ): Complex128;
 
 
 // EXPORTS //
 
-module.exports = main;
+export = csignum;
