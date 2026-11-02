@@ -60,32 +60,38 @@ The [signum][signum] function of a complex number is defined as
 
 <!-- Package usage documentation. -->
 
-<section class="installation">
 
-## Installation
-
-```bash
-npm install @stdlib/math-base-special-csignum
-```
-
-Alternatively,
-
--   To load the package in a website via a `script` tag without installation and bundlers, use the [ES Module][es-module] available on the [`esm`][esm-url] branch (see [README][esm-readme]).
--   If you are using Deno, visit the [`deno`][deno-url] branch (see [README][deno-readme] for usage intructions).
--   For use in Observable, or in browser/node environments, use the [Universal Module Definition (UMD)][umd] build available on the [`umd`][umd-url] branch (see [README][umd-readme]).
-
-The [branches.md][branches-url] file summarizes the available branches and displays a diagram illustrating their relationships.
-
-To view installation and usage instructions specific to each branch build, be sure to explicitly navigate to the respective README files on each branch, as linked to above.
-
-</section>
 
 <section class="usage">
 
 ## Usage
 
+To use in Observable,
+
 ```javascript
-var csignum = require( '@stdlib/math-base-special-csignum' );
+csignum = require( 'https://cdn.jsdelivr.net/gh/stdlib-js/math-base-special-csignum@umd/browser.js' )
+```
+
+To vendor stdlib functionality and avoid installing dependency trees for Node.js, you can use the UMD server build:
+
+```javascript
+var csignum = require( 'path/to/vendor/umd/math-base-special-csignum/index.js' )
+```
+
+To include the bundle in a webpage,
+
+```html
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/math-base-special-csignum@umd/browser.js"></script>
+```
+
+If no recognized module system is present, access bundle contents via the global scope:
+
+```html
+<script type="text/javascript">
+(function () {
+    window.csignum;
+})();
+</script>
 ```
 
 #### csignum( z )
@@ -174,17 +180,27 @@ The function supports the following parameters:
 
 <!-- eslint no-undef: "error" -->
 
-```javascript
-var Complex128Array = require( '@stdlib/array-complex128' );
-var uniform = require( '@stdlib/random-array-uniform' );
-var logEachMap = require( '@stdlib/console-log-each-map' );
-var csignum = require( '@stdlib/math-base-special-csignum' );
+```html
+<!DOCTYPE html>
+<html lang="en">
+<body>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/array-complex128@umd/browser.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/random-array-uniform@umd/browser.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/console-log-each-map@umd/browser.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/math-base-special-csignum@umd/browser.js"></script>
+<script type="text/javascript">
+(function () {
 
 // Create an array of random numbers:
 var arr = new Complex128Array( uniform( 200, -50.0, 50.0 ) );
 
 // Evaluate the sign of each number in the array:
 logEachMap( 'csignum(%s) = %s', arr, csignum );
+
+})();
+</script>
+</body>
+</html>
 ```
 
 </section>
@@ -193,114 +209,7 @@ logEachMap( 'csignum(%s) = %s', arr, csignum );
 
 <!-- C interface documentation. -->
 
-* * *
 
-<section class="c">
-
-## C APIs
-
-<!-- Section to include introductory text. Make sure to keep an empty line after the intro `section` element and another before the `/section` close. -->
-
-<section class="intro">
-
-</section>
-
-<!-- /.intro -->
-
-<!-- C usage documentation. -->
-
-<section class="usage">
-
-### Usage
-
-```c
-#include "stdlib/math/base/special/csignum.h"
-```
-
-#### stdlib_base_csignum( z )
-
-Evaluates the [signum][signum] function of a double-precision complex floating-point number.
-
-```c
-#include "stdlib/complex/float64/ctor.h"
-#include "stdlib/complex/float64/real.h"
-#include "stdlib/complex/float64/imag.h"
-
-stdlib_complex128_t z = stdlib_complex128( -4.2, 5.5 );
-
-stdlib_complex128_t out = stdlib_base_csignum( z );
-
-double re = stdlib_complex128_real( out );
-// returns -0.6069136033622302
-
-double im = stdlib_complex128_imag( out );
-// returns 0.79476781392673
-```
-
-The function accepts the following arguments:
-
--   **z**: `[in] stdlib_complex128_t` input value.
-
-```c
-stdlib_complex128_t stdlib_base_csignum( const stdlib_complex128_t z );
-```
-
-</section>
-
-<!-- /.usage -->
-
-<!-- C API usage notes. Make sure to keep an empty line after the `section` element and another before the `/section` close. -->
-
-<section class="notes">
-
-</section>
-
-<!-- /.notes -->
-
-<!-- C API usage examples. -->
-
-<section class="examples">
-
-### Examples
-
-```c
-#include "stdlib/math/base/special/csignum.h"
-#include "stdlib/complex/float64/ctor.h"
-#include "stdlib/complex/float64/reim.h"
-#include <stdio.h>
-
-int main( void ) {
-    const stdlib_complex128_t x[] = {
-        stdlib_complex128( 3.14, 1.5 ),
-        stdlib_complex128( -3.14, -1.5 ),
-        stdlib_complex128( 0.0, 0.0 ),
-        stdlib_complex128( 0.0/0.0, 0.0/0.0 )
-    };
-
-    stdlib_complex128_t v;
-    stdlib_complex128_t y;
-    double re1;
-    double im1;
-    double re2;
-    double im2;
-    int i;
-    for ( i = 0; i < 4; i++ ) {
-        v = x[ i ];
-        y = stdlib_base_csignum( v );
-        stdlib_complex128_reim( v, &re1, &im1 );
-        stdlib_complex128_reim( y, &re2, &im2 );
-        printf( "csignum(%lf + %lfi) = %lf + %lfi\n", re1, im1, re2, im2 );
-    }
-}
-```
-
-</section>
-
-<!-- /.examples -->
-
-</section>
-
-<!-- /.c -->
 
 <!-- Section to include cited references. If references are included, add a horizontal rule *before* the section. Make sure to keep an empty line after the `section` element and another before the `/section` close. -->
 
@@ -400,7 +309,7 @@ Copyright &copy; 2016-2026. The Stdlib [Authors][stdlib-authors].
 
 <!-- <related-links> -->
 
-[@stdlib/math/base/special/signum]: https://github.com/stdlib-js/math-base-special-signum
+[@stdlib/math/base/special/signum]: https://github.com/stdlib-js/math-base-special-signum/tree/umd
 
 <!-- </related-links> -->
 
